@@ -71,6 +71,7 @@ main {
 .navbar ul{
     display: flex;
     list-style-type: none;
+    
     padding: 0;
     justify-content: space-evenly;
     margin: 0;
@@ -84,6 +85,12 @@ main {
 
   .navbar a.active {
     color: red;
+    text-decoration: none;
+  }
+
+  .navbar a.link{
+    color: white;
+    text-decoration: none;
   }
 
   .main-content{
