@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded',function() {
     const savedName = localStorage.getItem('userName');
 
     if (savedName) {
-        userNameElement.textContent = `${savedName}'s Income`;
+        userNameElement.textContent = `${savedName}'s Outcome`;
     }
 });
 
