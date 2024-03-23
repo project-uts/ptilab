@@ -16,3 +16,4 @@ document.addEventListener('DOMContentLoaded',function() {
         userNameElement.textContent = `${savedName}'s Income`;
     }
 });
+

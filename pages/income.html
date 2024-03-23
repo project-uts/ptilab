@@ -19,9 +19,20 @@
             <li><a>About Us</a></li>
         </ul>
     </nav>
-    <div class="income-content">
-        <h1> Income</h1>
-    </div>
+    <main class="income-main">
+        <div class="income-content">
+            <h1> Income</h1>
+            <label for="transaction-name">Transaction Name</label>
+            <input type="text" id="transaction-name" class="transaction">
+            <label for="transaction-nominal">Transaction Nominal</label>
+            <input type="text" id="transaction-nominal" class="transaction">
+            <label for="transaction-type">Transaction Type</label>
+            <select name="" id="transaction" class="transaction">
+                <option value=""></option>
+            </select>
+            <button type="submit">Submit</button>
+        </div>
+    </main>
 
     <script src="income.js"></script>
 </body>

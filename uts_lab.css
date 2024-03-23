@@ -146,3 +146,41 @@ main {
     height: 80%;
     align-content: center;
   }
+
+  main .income-main{
+    display: flex;
+    justify-content: center;
+  }
+
+  .income-content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .income-content label{
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  .income-content input{
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .income-content select{
+    margin: 10px;
+    padding: 10px;
+    border: solid black 1px;
+  }
+
+   .income-content button{
+    width: 100px;
+    background-color: red;
+    padding: 5px 20px;
+    border-radius: 1rem;
+    margin: 5px;
+    color: white;
+  }
