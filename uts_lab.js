@@ -3,16 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitBtn = document.querySelector('.input-name button');
 
     submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Menghentikan perilaku default tombol submit
-        const enteredName = inputName.value.trim(); // Mengambil nilai nama yang dimasukkan pengguna
+        event.preventDefault(); 
+        const enteredName = inputName.value.trim(); 
 
         if (enteredName !== '') {
-            // Simpan nama di local storage untuk digunakan di halaman lain
             localStorage.setItem('userName', enteredName);
-            // Redirect ke halaman lain setelah nama disimpan
             window.location.href = './pages/main.html';
         } else {
-            alert('Please enter your name.'); // Tampilkan peringatan jika nama kosong
+            alert('Please enter your name.'); 
         }
     });
 });
