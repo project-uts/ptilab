@@ -1,186 +1,253 @@
 body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    display: flex;
-    height: 100%;
-    flex: auto;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .login {
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid black;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
 }
 
 .money {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
-.input-name{
-    display: flex;
-    width: auto;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+.input-name {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 .input-name label {
-    text-align: center;
-    margin: 10px;
-    font-weight: 700;
+  text-align: center;
+  margin: 10px;
+  font-weight: 700;
 }
 
- .input-name input{
-    background-color: rgb(165, 165, 165);
-    width: 200px;
-    border: solid black;
-    padding: 5px;
+.input-name input {
+  background-color: rgb(165, 165, 165);
+  width: 200px;
+  border: solid black;
+  padding: 5px;
 }
 
-.input-name button { 
-    width: 100px;
-    background-color: red;
-    padding: 5px 20px;
-    border-radius: 1rem;
-    margin: 5px;
+/* .input-name button {
+  width: 100px;
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 1rem;
+  margin: 5px;
+} */
+
+.submit-name {
+  width: 100px;
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 1rem;
+  margin: 5px;
 }
-.input-name button a{
-    text-decoration: none;
-    color: white;
+
+.input-name button a {
+  text-decoration: none;
+  color: white;
 }
 
 .navbar {
-    background-color: black;
-    color: white;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar ul{
-    display: flex;
-    list-style-type: none;
-    
-    padding: 0;
-    justify-content: space-evenly;
-    margin: 0;
-    align-items: center;
-  }
+.navbar ul {
+  display: flex;
+  list-style-type: none;
 
-  .navbar img {
-    width: 50px;
-    height: auto;
-  }
+  padding: 0;
+  justify-content: space-evenly;
+  margin: 0;
+  align-items: center;
+}
 
-  .navbar a.active {
-    color: red;
-    text-decoration: none;
-  }
+.navbar img {
+  width: 50px;
+  height: auto;
+}
 
-  .navbar a.link{
-    color: white;
-    text-decoration: none;
-  }
+.navbar a.active {
+  color: red;
+  text-decoration: none;
+}
 
-  .main-content{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex: auto;
-    justify-content: space-around;
-  }
-  
-  .balance {
-    font-weight: 700;
-    width: 25%;
-    height: fit-content;
-    background-color: rgb(171, 171, 171);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 50px;
-  }
+.navbar a.link {
+  color: white;
+  text-decoration: none;
+}
 
-  .amount {
-    display: flex;
-    flex: auto;
-    flex-direction: column;
-  }
+.main-content {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex: auto;
+  justify-content: space-around;
+}
 
-  .amount .rupiah{
-    margin: 0;
-    font-size: x-large;
-  }
+.balance {
+  font-weight: 700;
+  width: 25%;
+  height: fit-content;
+  background-color: rgb(171, 171, 171);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
 
-  .amount .nominal{
-    font-size: xx-large;
-    text-align: end;
-  }
+.amount {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+}
 
-  
-  .transaction {
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-    width: 40%;
-    height: 80%;
-    background-color: rgb(171, 171, 171);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 50px;
-  }
+.amount .rupiah {
+  margin: 0;
+  font-size: x-large;
+}
 
-  .transaction .info {
-    font-size: xx-large;
-    text-align: center;
-    height: 80%;
-    align-content: center;
-  }
+.amount .nominal {
+  font-size: xx-large;
+  text-align: end;
+}
 
-  main .income-main{
-    display: flex;
-    justify-content: center;
-  }
+.transaction {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  width: 40%;
+  height: 80%;
+  background-color: rgb(171, 171, 171);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
 
-  .income-content {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.transaction .info {
+  font-size: xx-large;
+  text-align: center;
+  height: 80%;
+  align-content: center;
+}
 
-  .income-content label{
-    font-weight: bold;
-    font-size: x-large;
-  }
+main .income-main {
+  display: flex;
+  justify-content: center;
+}
 
-  .income-content input{
-    margin: 10px;
-    padding: 10px;
-  }
+.income-content {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .income-content select{
-    margin: 10px;
-    padding: 10px;
-    border: solid black 1px;
-  }
+.income-content label {
+  font-weight: bold;
+  font-size: x-large;
+}
 
-   .income-content button{
-    width: 100px;
-    background-color: red;
-    padding: 5px 20px;
-    border-radius: 1rem;
-    margin: 5px;
-    color: white;
-  }
+.transaction-income {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(171, 171, 171);
+  width: 40%;
+}
+
+/* .income-content select {
+  margin: 10px;
+  padding: 10px;
+  border: solid black 1px;
+} */
+/* 
+.income-content button {
+  width: 100px;
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 1rem;
+  margin: 5px;
+  color: white;
+} */
+
+.category-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+.drop-button {
+  background-color: rgb(171, 171, 171);
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+#categoryInput {
+  width: 100%;
+  height: 33px;
+  background-color: rgb(171, 171, 171);
+}
+
+#submit-income {
+  width: 100px;
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 1rem;
+  margin: 5px;
+  color: white;
+}
+
+.show {
+  display: block;
+}
