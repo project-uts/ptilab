@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../uts_lab.css" />
-    <title>Home</title>
-  </head>
 
-  <body>
-    <nav class="navbar">
-      <ul>
-        <img src="../assets/money-bag.png" />
-        <p>Hello,</p>
-        <li><a href="main.html" class="link">Main</a></li>
-        <li><a href="income.html" class="active">Income</a></li>
-        <li><a href="outcome.html" class="link">Outcome</a></li>
-        <li><a>About Us</a></li>
-      </ul>
-    </nav>
-    <main class="income-main">
-      <div class="income-content">
-        <h1>Income</h1>
-        <label for="transaction-name">Transaction Name</label>
-        <input type="text" id="transaction-name " class="transaction-income" />
-        <label for="transaction-nominal">Transaction Nominal</label>
-        <input
-          type="text"
-          id="transaction-nominal"
-          class="transaction-income"
-        />
-        <label for="transaction-type">Transaction Type</label>
-        <div class="category-input">
-          <input
-            type="text"
-            id="categoryInput"
-            placeholder="Selected Category"
-            readonly
-          />
-          <div class="dropdown">
-            <button class="drop-button" onclick="category()">Category</button>
-            <div id="myDropdown" class="dropdown-content">
-              <p onclick="selectCategory('test1')">test1</p>
-              <p onclick="selectCategory('test2')">test2</p>
-              <p onclick="selectCategory('test3')">test3</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../uts_lab.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <img src="../assets/money-bag.png" />
+      <p>Hello,</p>
+      <li><a href="main.html" class="link">Main</a></li>
+      <li><a href="income.html" class="active">Income</a></li>
+      <li><a href="outcome.html" class="link">Outcome</a></li>
+      <li><a>About Us</a></li>
+    </ul>
+  </nav>
+  <main class="income-main">
+    <div class="income-content">
+      <h1>Income</h1>
+      <label for="transaction-name">Transaction Name</label>
+      <input type="text" id="transaction-name " class="transaction-income" />
+      <label for="transaction-nominal">Transaction Nominal</label>
+      <input type="text" id="transaction-nominal" class="transaction-income" />
+      <label for="transaction-type">Transaction Type</label>
+      <div class="category-input">
+        <input type="text" id="categoryInput" placeholder="Selected Category" readonly />
+        <div class="dropdown">
+          <button class="drop-button" onclick="category()">Category</button>
+          <div id="myDropdown" class="dropdown-content">
+            <p onclick="selectCategory('Makan')">Makan</p>
+            <p onclick="selectCategory('Main')">Main</p>
+            <p onclick="selectCategory('Edukasi')">Edukasi</p>
+            <p onclick="selectCategory('Belanja')">Belanja</p>
+            <p onclick="selectCategory('Lainnya')">Lainnya</p>
           </div>
         </div>
-        <button id="submit-income" type="submit">Submit</button>
       </div>
-    </main>
+      <button id="submit-income" type="submit">Submit</button>
+    </div>
+  </main>
 
-    <script src="income.js"></script>
-  </body>
+  <script src="income.js"></script>
+</body>
+
 </html>
