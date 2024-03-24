@@ -22,25 +22,27 @@
   <main class="income-main">
     <div class="income-content">
       <h1>Income</h1>
-      <label for="transaction-name">Transaction Name</label>
-      <input type="text" id="transaction-name " class="transaction-income" />
-      <label for="transaction-nominal">Transaction Nominal</label>
-      <input type="text" id="transaction-nominal" class="transaction-income" />
-      <label for="transaction-type">Transaction Type</label>
-      <div class="category-input">
-        <input type="text" id="categoryInput" placeholder="Selected Category" readonly />
-        <div class="dropdown">
-          <button class="drop-button" onclick="category()">Category</button>
-          <div id="myDropdown" class="dropdown-content">
-            <p onclick="selectCategory('Makan')">Makan</p>
-            <p onclick="selectCategory('Main')">Main</p>
-            <p onclick="selectCategory('Edukasi')">Edukasi</p>
-            <p onclick="selectCategory('Belanja')">Belanja</p>
-            <p onclick="selectCategory('Lainnya')">Lainnya</p>
+      <form class="income-form" id="incomeForm">
+        <label for="transaction-name">Transaction Name</label>
+        <input type="text" id="transactionName " class="transaction-income" />
+        <label for="transaction-nominal">Transaction Nominal</label>
+        <input type="text" id="transactionNominal" class="transaction-income" />
+        <label for="transaction-type">Transaction Type</label>
+        <div class="category-input">
+          <input type="text" id="categoryInput" placeholder="Selected Category" readonly />
+          <div class="dropdown">
+            <button class="drop-button" onclick="category()">Category</button>
+            <div id="myDropdown" class="dropdown-content">
+              <p onclick="selectCategory('Makan')">Makan</p>
+              <p onclick="selectCategory('Main')">Main</p>
+              <p onclick="selectCategory('Edukasi')">Edukasi</p>
+              <p onclick="selectCategory('Belanja')">Belanja</p>
+              <p onclick="selectCategory('Lainnya')">Lainnya</p>
+            </div>
           </div>
         </div>
-      </div>
-      <button id="submit-income" type="submit">Submit</button>
+        <button id="submit-income" type="submit">Submit</button>
+      </form>
     </div>
   </main>
 
