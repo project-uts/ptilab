@@ -32,6 +32,16 @@
             <p class="info">Belum ada transaksi</p>
         </div>
     </div>
+    <button id="resetLocalStorageButton">Reset Local Storage</button>
+<script>
+
+    document.getElementById('resetLocalStorageButton').addEventListener('click', function() {
+       
+        localStorage.clear(); 
+        alert('Local Storage telah direset.');
+    });
+</script>
+    
     <script src="main.js"></script>
 </body>
 
