@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 function category() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -26,16 +27,44 @@ function selectCategory(category) {
 }
 
 window.onclick = function (event) {
-  event.preventDefault();
-  if (!event.target.matches('.drop-button')) {
+  if (!event.target.matches(".drop-button")) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
       }
     }
   }
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+  const incomeForm = document.getElementById("incomeForm");
+
+  incomeForm.addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    const transactionName = document
+      .getElementById("transactionName")
+      .value.trim();
+    const transactionNominal = document
+      .getElementById("transactionNominal")
+      .value.trim();
+    const categoryInput = document.getElementById("categoryInput").value.trim();
+
+    if (
+      transactionName !== "" &&
+      transactionNominal !== "" &&
+      categoryInput !== ""
+    ) {
+      alert("Transaksi sukses!");
+      localStorage.setItem('transactionName', transactionName);
+      localStorage.setItem('transactionNominal', transactionNominal);
+      localStorage.setItem('transactionCategory', categoryInput);
+
+    } else {
+      alert("Transaksi belum selesai, silakan lengkapi formulir!");
+    }
+  });
+});
