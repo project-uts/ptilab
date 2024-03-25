@@ -16,7 +16,7 @@
       <li><a href="main.html" class="link">Main</a></li>
       <li><a href="income.html" class="link">Income</a></li>
       <li><a href="outcome.html" class="active">Outcome</a></li>
-      <li><a>About Us</a></li>
+      <li><a href="about.html" class="link">About Us</a></li>
     </ul>
   </nav>
   <main class="income-main">
@@ -29,19 +29,19 @@
         <input type="text" id="transactionNominal" class="transaction-income" />
         <label for="transaction-type">Transaction Type</label>
         <div class="category-input">
-            <input type="text" id="categoryInput" placeholder="Selected Category" readonly />
-            <div class="dropdown">
-                <button class="drop-button" onclick="toggleDropdown('myDropdown')">Category</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <p onclick="selectCategory('Makan')">Makan</p>
-                    <p onclick="selectCategory('Main')">Main</p>
-                    <p onclick="selectCategory('Edukasi')">Edukasi</p>
-                    <p onclick="selectCategory('Belanja')">Belanja</p>
-                    <p onclick="selectCategory('Lainnya')">Lainnya</p>
-                </div>
+          <input type="text" id="categoryInput" placeholder="Selected Category" readonly />
+          <div class="dropdown">
+            <button class="drop-button" onclick="toggleDropdown('myDropdown')">Category</button>
+            <div id="myDropdown" class="dropdown-content">
+              <p onclick="selectCategory('Makan')">Makan</p>
+              <p onclick="selectCategory('Main')">Main</p>
+              <p onclick="selectCategory('Edukasi')">Edukasi</p>
+              <p onclick="selectCategory('Belanja')">Belanja</p>
+              <p onclick="selectCategory('Lainnya')">Lainnya</p>
             </div>
+          </div>
         </div>
-        
+
         <input id="submit-income" type="submit" value="Submit" />
       </form>
     </div>

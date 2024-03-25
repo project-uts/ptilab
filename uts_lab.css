@@ -260,3 +260,32 @@ main .income-main {
 .show {
   display: block;
 }
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.about-data {
+  width: 250px;
+  text-align: center;
+}
+
+.about-data img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.about-data h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.about-data p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
