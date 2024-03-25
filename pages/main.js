@@ -6,28 +6,30 @@ document.addEventListener('DOMContentLoaded', function() {
         userNameElement.textContent = `Hello, ${savedName}`;
     }
 
-    const transactionName = localStorage.getItem('transactionName');
-    const transactionNominal = localStorage.getItem('transactionNominal');
-    const transactionCategory = localStorage.getItem('transactionCategory');
-
-    if (transactionName && transactionNominal && transactionCategory) {
-        const transactionInfo = document.querySelector('.transaction .info');
-        transactionInfo.innerHTML = `
-            <p>Nama Transaksi: ${transactionName}</p>
-            <p>Nominal Transaksi: ${transactionNominal}</p>
-            <p>Kategori Transaksi: ${transactionCategory}</p>
-        `;
-
-        localStorage.removeItem('transactionName');
-        localStorage.removeItem('transactionNominal');
-        localStorage.removeItem('transactionCategory');
-    } else {
-
-        const transactionInfo = document.querySelector('.transaction .info');
-        transactionInfo.textContent = 'Belum ada transaksi';
-    }
+    updateMainPage(); 
 });
 
-window.addEventListener('beforeunload', function() {
-    localStorage.clear();
-});
+function updateMainPage() {
+    const balanceElement = document.querySelector('.amount .nominal');
+    const transactionListElement = document.querySelector('.transaction .info');
+
+    let totalIncome = 0;
+    let totalOutcome = 0;
+    let transactionHTML = '';
+
+    const incomeTransactions = JSON.parse(localStorage.getItem("incomeTransactions")) || [];
+    incomeTransactions.forEach(transaction => {
+        totalIncome += parseFloat(transaction.nominal);
+        transactionHTML += `<p style="color:green;">${transaction.name} - ${transaction.nominal} - ${transaction.category}</p>`;
+    });
+
+    const outcomeTransactions = JSON.parse(localStorage.getItem("outcomeTransactions")) || [];
+    outcomeTransactions.forEach(transaction => {
+        totalOutcome += parseFloat(transaction.nominal);
+        transactionHTML += `<p style="color:red;">${transaction.name} - ${transaction.nominal} - ${transaction.category}</p>`;
+    });
+
+    const totalBalance = totalIncome - totalOutcome;
+    balanceElement.textContent = totalBalance.toFixed(2); 
+    transactionListElement.innerHTML = transactionHTML; 
+}
