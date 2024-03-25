@@ -43,20 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const incomeForm = document.getElementById("incomeForm");
 
   incomeForm.addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-     const transactionName = document.getElementById("transactionName").value.trim();
-     const transactionNominal = document.getElementById("transactionNominal").value.trim();
-     const categoryInput = document.getElementById("categoryInput").value.trim();
+    const transactionName = document.getElementById("transactionName").value.trim();
+    const transactionNominal = document.getElementById("transactionNominal").value.trim();
+    const categoryInput = document.getElementById("categoryInput").value.trim();
 
-     if (transactionName !== "" && transactionNominal !== "" && categoryInput !== "") {
-            localStorage.setItem('transactionName', transactionName);
-            localStorage.setItem('transactionNominal', transactionNominal);
-            localStorage.setItem('transactionCategory', categoryInput);
+    if (transactionName !== "" && transactionNominal !== "" && categoryInput !== "") {
+      const incomeTransactions = JSON.parse(localStorage.getItem("incomeTransactions")) || [];
+      incomeTransactions.push({ name: transactionName, nominal: transactionNominal, category: categoryInput });
+      localStorage.setItem("incomeTransactions", JSON.stringify(incomeTransactions));
 
-            window.location.href = "../pages/main.html";
-        } else {
-            alert("Transaksi belum selesai, silakan lengkapi formulir!");
-        }
-    });
+      alert("Transaksi sukses!");
+
+      window.location.href = "../pages/main.html";
+    } else {
+      alert("Transaksi belum selesai, silakan lengkapi formulir!");
+    }
+  });
 });
