@@ -45,26 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
   incomeForm.addEventListener("submit", function (event) {
     event.preventDefault(); 
 
-    const transactionName = document
-      .getElementById("transactionName")
-      .value.trim();
-    const transactionNominal = document
-      .getElementById("transactionNominal")
-      .value.trim();
-    const categoryInput = document.getElementById("categoryInput").value.trim();
+     const transactionName = document.getElementById("transactionName").value.trim();
+     const transactionNominal = document.getElementById("transactionNominal").value.trim();
+     const categoryInput = document.getElementById("categoryInput").value.trim();
 
-    if (
-      transactionName !== "" &&
-      transactionNominal !== "" &&
-      categoryInput !== ""
-    ) {
-      alert("Transaksi sukses!");
-      localStorage.setItem('transactionName', transactionName);
-      localStorage.setItem('transactionNominal', transactionNominal);
-      localStorage.setItem('transactionCategory', categoryInput);
+     if (transactionName !== "" && transactionNominal !== "" && categoryInput !== "") {
+            localStorage.setItem('transactionName', transactionName);
+            localStorage.setItem('transactionNominal', transactionNominal);
+            localStorage.setItem('transactionCategory', categoryInput);
 
-    } else {
-      alert("Transaksi belum selesai, silakan lengkapi formulir!");
-    }
-  });
+            window.location.href = "../main.html";
+        } else {
+            alert("Transaksi belum selesai, silakan lengkapi formulir!");
+        }
+    });
 });
