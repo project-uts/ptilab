@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem('transactionNominal', transactionNominal);
             localStorage.setItem('transactionCategory', categoryInput);
 
-            window.location.href = "pages/main.html";
+            window.location.href = "../pages/main.html";
         } else {
             alert("Transaksi belum selesai, silakan lengkapi formulir!");
         }
