@@ -41,21 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const outcomeForm = document.getElementById("incomeForm");
 
   outcomeForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      const transactionName = document.getElementById("transactionName").value.trim();
-      const transactionNominal = document.getElementById("transactionNominal").value.trim();
-      const categoryInput = document.getElementById("categoryInput").value.trim();
+    const transactionName = document.getElementById("transactionName").value.trim();
+    const transactionNominal = document.getElementById("transactionNominal").value.trim();
+    const categoryInput = document.getElementById("categoryInput").value.trim();
 
-      if (transactionName !== "" && transactionNominal !== "" && categoryInput !== "") {
-          localStorage.setItem("transactionName", transactionName);
-          localStorage.setItem("transactionNominal", transactionNominal);
-          localStorage.setItem("transactionCategory", categoryInput);
+    if (transactionName !== "" && transactionNominal !== "" && categoryInput !== "") {
+      const outcomeTransactions = JSON.parse(localStorage.getItem("outcomeTransactions")) || [];
+      outcomeTransactions.push({ name: transactionName, nominal: transactionNominal, category: categoryInput });
+      localStorage.setItem("outcomeTransactions", JSON.stringify(outcomeTransactions));
 
-          alert("Transaksi sukses!"); 
-          window.location.href = "../pages/main.html"; 
-      } else {
-          alert("Transaksi belum selesai, silakan lengkapi formulir!"); 
-      }
+      alert("Transaksi sukses!");
+
+      window.location.href = "../pages/main.html";
+    } else {
+      alert("Transaksi belum selesai, silakan lengkapi formulir!");
+    }
   });
 });
+
