@@ -26,6 +26,7 @@ function selectCategory(category) {
 }
 
 window.onclick = function (event) {
+  event.preventDefault();
   if (!event.target.matches('.drop-button')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
